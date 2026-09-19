@@ -1,14 +1,34 @@
-import { Link, Route, Routes } from 'react-router';
+import { NavLink, Route, Routes } from 'react-router';
 import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
+import './App.css';
 
 function App() {
   return (
     <>
-      <nav>
-        <Link to='/'>Главная</Link>
-        
-        <Link to='/projects'>Проекты</Link>
+      <nav className='nav'>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'nav__link nav__link--active'
+              : 'nav__link'
+          }
+          to='/'
+          end
+        >
+          Главная
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'nav__link nav__link--active'
+              : 'nav__link'
+          }
+          to='/projects'
+        >
+          Проекты
+        </NavLink>
       </nav>
       <Routes>
         <Route
