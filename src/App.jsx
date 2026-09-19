@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from 'react-router';
 import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
 import './App.css';
+import ProjectDetails from './pages/ProjectDetails.jsx';
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
         <Route
           path='/projects'
           element={<Projects />}
+        />
+
+        <Route
+          path='/projects/:id'
+          element={<ProjectDetails/>}
         />
       </Routes>
     </>
