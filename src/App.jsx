@@ -5,64 +5,46 @@ import './App.css';
 import ProjectDetails from './pages/ProjectDetails.jsx';
 import NotFound from './pages/NotFound.jsx';
 import ProjectsLayout from './layouts/ProjectsLayout.jsx';
+import RootLayout from './layouts/RootLayout.jsx';
 
 
 function App() {
   return (
     <>
-      <nav className='nav'>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? 'nav__link nav__link--active'
-              : 'nav__link'
-          }
-          to='/'
-          end
-        >
-          Главная
-        </NavLink>
-
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? 'nav__link nav__link--active'
-              : 'nav__link'
-          }
-          to='/projects'
-        >
-          Проекты
-        </NavLink>
-      </nav>
       <Routes>
         <Route
           path='/'
-          element={<Home />}
-        />
-
-        <Route
-          path='/projects'
-          element={<ProjectsLayout />}
+          element={<RootLayout />}
         >
           <Route
             index
-            element={<Projects />}
+            element={<Home />}
           />
+
           <Route
-            path=':id'
+            path='projects'
+            element={<ProjectsLayout />}
+          >
+            <Route
+              index
+              element={<Projects />}
+            />
+            <Route
+              path=':id'
+              element={<ProjectDetails />}
+            />
+          </Route>
+
+          <Route
+            path='/projects/:id'
             element={<ProjectDetails />}
           />
+
+          <Route
+            path='*'
+            element={<NotFound />}
+          />
         </Route>
-
-        <Route
-          path='/projects/:id'
-          element={<ProjectDetails />}
-        />
-
-        <Route
-          path='*'
-          element={<NotFound />}
-        />
       </Routes>
     </>
   );
