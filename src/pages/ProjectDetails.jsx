@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { projects } from "../data/projects";
 
 function ProjectDetails() {
@@ -21,6 +21,8 @@ function ProjectDetails() {
             <h1>{project.title}</h1>
 
             <p>{project.description}</p>
+
+            <Link to='..'>Назад к проектам</Link>
         </section>
     );
 }
