@@ -8,7 +8,7 @@ function Projects() {
 
             <ul>
                 {projects.map((project) => (
-                    <li key={projects.id}>
+                    <li key={project.id}>
                         <Link to={`/projects/${project.id}`}>
                             {project.title}
                         </Link>

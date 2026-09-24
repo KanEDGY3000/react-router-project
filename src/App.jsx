@@ -3,6 +3,8 @@ import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
 import './App.css';
 import ProjectDetails from './pages/ProjectDetails.jsx';
+import NotFound from './pages/NotFound.jsx';
+
 
 function App() {
   return (
@@ -45,6 +47,11 @@ function App() {
         <Route
           path='/projects/:id'
           element={<ProjectDetails/>}
+        />
+
+        <Route
+          path='*'
+          element={<NotFound/>}
         />
       </Routes>
     </>
