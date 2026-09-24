@@ -4,7 +4,7 @@ import { Link } from "react-router";
 function Projects() {
     return (
         <section>
-            <h1>Проекты</h1>
+            <h2>Проекты</h2>
 
             <ul>
                 {projects.map((project) => (

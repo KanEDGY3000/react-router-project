@@ -4,6 +4,7 @@ import Projects from './pages/Projects.jsx';
 import './App.css';
 import ProjectDetails from './pages/ProjectDetails.jsx';
 import NotFound from './pages/NotFound.jsx';
+import ProjectsLayout from './layouts/ProjectsLayout.jsx';
 
 
 function App() {
@@ -41,17 +42,26 @@ function App() {
 
         <Route
           path='/projects'
-          element={<Projects />}
-        />
+          element={<ProjectsLayout />}
+        >
+          <Route
+            index
+            element={<Projects />}
+          />
+          <Route
+            path=':id'
+            element={<ProjectDetails />}
+          />
+        </Route>
 
         <Route
           path='/projects/:id'
-          element={<ProjectDetails/>}
+          element={<ProjectDetails />}
         />
 
         <Route
           path='*'
-          element={<NotFound/>}
+          element={<NotFound />}
         />
       </Routes>
     </>
