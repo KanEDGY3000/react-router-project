@@ -27,6 +27,17 @@ function RootLayout() {
                 >
                     Проекты
                 </NavLink>
+
+                <NavLink
+                    className={({isActive}) => 
+                        isActive
+                            ? 'nav__link nav__link--active'
+                            : 'nav__link'
+                    }
+                    to='/about'
+                >
+                    О приложении
+                </NavLink>
             </nav>
 
             <main>

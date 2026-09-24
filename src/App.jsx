@@ -6,6 +6,7 @@ import ProjectDetails from './pages/ProjectDetails.jsx';
 import NotFound from './pages/NotFound.jsx';
 import ProjectsLayout from './layouts/ProjectsLayout.jsx';
 import RootLayout from './layouts/RootLayout.jsx';
+import About from './pages/About.jsx';
 
 
 function App() {
@@ -19,6 +20,11 @@ function App() {
           <Route
             index
             element={<Home />}
+          />
+
+          <Route
+            path='about'
+            element={<About/>}
           />
 
           <Route
