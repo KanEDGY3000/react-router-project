@@ -6,11 +6,18 @@ function Projects() {
         <section>
             <h2>Проекты</h2>
 
-            <ul>
+            <ul className="catalog">
                 {projects.map((project) => (
                     <li key={project.id}>
-                        <Link to={String(project.id)}>
-                            {project.title}
+                        <Link
+                            className="catalog__link"
+                            to={String(project.id)}
+                        >
+                            <h3 className="catalog__title">
+                                {project.title}
+                            </h3>
+
+                            <span>Подробнее →</span>
                         </Link>
                     </li>
                 ))}
