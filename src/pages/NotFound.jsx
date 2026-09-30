@@ -12,7 +12,7 @@ function NotFound() {
     return (
         <section className="not-found">
             <span
-                className="not-found"
+                className="not-found__code"
                 aria-hidden="true"
             >
                 404

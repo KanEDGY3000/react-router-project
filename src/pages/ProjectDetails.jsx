@@ -10,8 +10,10 @@ function ProjectDetails() {
 
     if (!project) {
         return (
-            <section>
+            <section className="details">
                 <h1>Проект не найден</h1>
+
+                <Link to='..'>Назад к проектам</Link>
             </section>
         );
     }

@@ -1,16 +1,96 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Router Practice
 
-Currently, two official plugins are available:
+Учебное React-приложение для практики клиентской маршрутизации с использованием React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Технологии
 
-## React Compiler
+- React
+- React Router
+- JavaScript (ES6+)
+- CSS3
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Возможности
 
-## Expanding the ESLint configuration
+- Навигация между страницами без полной перезагрузки.
+- Подсветка активной ссылки через NavLink.
+- Вложенные маршруты с использованием Outlet.
+- Динамические страницы проектов и технологий.
+- Обработка несуществующих маршрутов (404).
+- Адаптивный интерфейс.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Маршруты
+
+| URL | Страница |
+| --- | --- |
+| `/` | Главная |
+| `/about` | О приложении |
+| `/projects` | Список проектов |
+| `/projects/:id` | Детали проекта |
+| `/technologies` | Список технологий |
+| `/technologies/:slug` | Детали технологии |
+| `*` | Страница 404 |
+
+## Запуск проекта
+
+Клонировать репозиторий:
+
+```bash
+git clone https://github.com/KanEDGY3000/react-router-project.git
+```
+
+Перейти в папку:
+
+```bash
+cd react-router-project
+```
+
+Установить зависимости:
+
+```bash
+npm install
+```
+
+Запустить приложение:
+
+```bash
+npm run dev
+```
+
+## Проверка проекта
+
+```bash
+npm run lint
+npm run build
+```
+
+## Цель проекта
+
+Закрепить основные возможности React Router: Routes, Route, Link, NavLink, Outlet, useParams и useNavigate.
+
+## Структура проекта
+
+```text
+src/
+├── pages/           # Компоненты отдельных страниц приложения
+├── layouts/         # Общие layout-компоненты для вложенных маршрутов
+├── data/            # Локальные данные проектов и технологий
+├── App.jsx          # Описание структуры маршрутов приложения
+├── App.css          # Основные стили приложения
+├── index.css        # Глобальные стили
+└── main.jsx         # Точка входа и подключение BrowserRouter
+```
+
+### Описание основных папок
+
+- **pages/** — содержит компоненты страниц, которые отображаются для разных маршрутов, например `Home`, `Projects`, `ProjectDetails`, `Technologies` и `NotFound`.
+- **layouts/** — содержит компоненты-обёртки для вложенных маршрутов. Через `Outlet` они определяют, где должен отображаться дочерний маршрут.
+- **data/** — содержит локальные массивы данных для проектов и технологий, которые используются на страницах списка и деталей.
+
+### Основные файлы
+
+- **App.jsx** — содержит дерево маршрутов приложения с `Routes`, `Route`, вложенными маршрутами, динамическими параметрами и 404-маршрутом.
+- **main.jsx** — точка входа приложения, где `App` оборачивается в `BrowserRouter`.
+- **App.css** — стили навигации, карточек, страниц деталей, 404 и адаптивного интерфейса.
+- **index.css** — базовые глобальные стили приложения.

@@ -11,7 +11,7 @@ function TechnologiesDetails() {
 
     if (!technology) {
         return (
-            <section>
+            <section className="details">
                 <h1>Технология не найдена</h1>
 
                 <Link to='..'>Назад к технологиям</Link>
@@ -25,7 +25,7 @@ function TechnologiesDetails() {
 
             <p className="details__description">{technology.description}</p>
 
-            <div className="details__action">
+            <div className="details__actions">
                 <Link
                     className="details__back"
                     to='..'

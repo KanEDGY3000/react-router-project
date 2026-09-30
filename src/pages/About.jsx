@@ -5,7 +5,7 @@ function About() {
             <h1>О приложении</h1>
 
             <p>
-                Учебный преокт для изучения React Router
+                Учебный проект для изучения React Router
             </p>
         </section>
     );
