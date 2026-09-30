@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
 import './App.css';
