@@ -9,7 +9,7 @@ function Home() {
                 Учебный проект для изучения React Router
             </p>
 
-            <Link to='/technologies/typescript'>Посмотреть Type Script</Link>
+            <Link to='/technologies/typescript'>Посмотреть TypeScript</Link>
         </section>
     );
 }

@@ -12,7 +12,7 @@ function TechnologiesDetails() {
     if (!technology) {
         return (
             <section>
-                <h1>Технологии не найдены</h1>
+                <h1>Технология не найдены</h1>
 
                 <Link to='..'>Назад к технологиям</Link>
             </section>
