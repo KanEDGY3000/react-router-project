@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 function Home() {
     return (
@@ -7,6 +8,8 @@ function Home() {
             <p>
                 Учебный проект для изучения React Router
             </p>
+
+            <Link to='/technologies/typescript'>Посмотреть Type Script</Link>
         </section>
     );
 }

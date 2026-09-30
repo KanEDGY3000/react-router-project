@@ -20,4 +20,9 @@ export const technologies = [
         title: 'React',
         description: 'JavaScript-библиотека для создания интерфейсов.',
     },
+    {
+        slug: 'typescript',
+        title: 'TypeScript',
+        description: 'JavaScript с поддержкой статической типизации.',
+    },
 ];
