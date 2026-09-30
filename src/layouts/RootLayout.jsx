@@ -51,7 +51,7 @@ function RootLayout() {
                 </NavLink>
             </nav>
 
-            <main>
+            <main className="main">
                 <Outlet/>
             </main>
         </>
