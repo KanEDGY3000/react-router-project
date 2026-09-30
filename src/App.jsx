@@ -7,6 +7,9 @@ import NotFound from './pages/NotFound.jsx';
 import ProjectsLayout from './layouts/ProjectsLayout.jsx';
 import RootLayout from './layouts/RootLayout.jsx';
 import About from './pages/About.jsx';
+import TechnologiesLayout from './layouts/TechnologiesLayout.jsx';
+import Technologies from './pages/Technologies.jsx';
+import TechnologiesDetails from './pages/TechnologiesDetails.jsx';
 
 
 function App() {
@@ -28,6 +31,20 @@ function App() {
           />
 
           <Route
+            path='technologies'
+            element={<TechnologiesLayout/>}
+          >
+            <Route
+              index
+              element={<Technologies/>}
+            />
+            <Route
+              path=':slug'
+              element={<TechnologiesDetails/>}
+            />
+          </Route>
+
+          <Route
             path='projects'
             element={<ProjectsLayout />}
           >
@@ -40,11 +57,6 @@ function App() {
               element={<ProjectDetails />}
             />
           </Route>
-
-          <Route
-            path='/projects/:id'
-            element={<ProjectDetails />}
-          />
 
           <Route
             path='*'
