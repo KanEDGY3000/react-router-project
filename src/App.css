@@ -145,7 +145,105 @@ button:focus-visible {
   font-weight: 600;
 }
 
-.catalog__description {
+/* Details */
+
+.details {
+  margin-top: 24px;
+  padding: 28px;
+
+  background-color: #18253b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+.details__title {
   margin: 0;
-  line-height: 1.5;
+  font-size: 28px;
+}
+
+.details__description {
+  margin: 14px 0 0;
+  line-height: 1.6;
+}
+
+.details__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.main .details__back,
+.main .details__back:visited {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 16px;
+
+  color: #dbeafe;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+
+  background-color: #243b5b;
+  border: 1px solid #3b5270;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.main .details__back:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #304c72;
+}
+
+/* Not Found */
+
+.main>.not-found {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.not-found__code {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #60a5fa;
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.not-found h1 {
+  margin: 0 0 16px;
+  font-size: 30px;
+}
+
+.not-found p {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.not-found__button {
+  margin-top: 28px;
+  padding: 12px 22px;
+
+  color: #ffffff;
+  font-weight: 600;
+
+  background-color: #2563eb;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.not-found__button:hover {
+  background-color: #1d4ed8;
 }

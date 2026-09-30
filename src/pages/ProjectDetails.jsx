@@ -1,13 +1,8 @@
-import { Link, useParams, useNavigate } from "react-router";
+import { Link, useParams } from "react-router";
 import { projects } from "../data/projects";
 
 function ProjectDetails() {
     const { id } = useParams();
-    const navigate = useNavigate();
-
-    function handleGoBack() {
-        navigate(-1);
-    }
 
     const project = projects.find(
         (project) => project.id === Number(id)
@@ -22,19 +17,19 @@ function ProjectDetails() {
     }
 
     return (
-        <section>
-            <h1>{project.title}</h1>
+        <section className="details">
+            <h2 className="details__title">{project.title}</h2>
 
-            <p>{project.description}</p>
+            <p className="details__description">{project.description}</p>
 
-            <Link to='..'>Назад к проектам</Link>
-
-            <button
-                type="button"
-                onClick={handleGoBack}
-            >
-                Вернуться назад
-            </button>
+            <div className="details__actions">
+                <Link
+                    className="details__back"
+                    to='..'
+                >
+                    ← Назад к проектам
+                </Link>
+            </div>
         </section>
     );
 }

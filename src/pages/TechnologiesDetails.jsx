@@ -12,7 +12,7 @@ function TechnologiesDetails() {
     if (!technology) {
         return (
             <section>
-                <h1>Технология не найдены</h1>
+                <h1>Технология не найдена</h1>
 
                 <Link to='..'>Назад к технологиям</Link>
             </section>
@@ -20,12 +20,20 @@ function TechnologiesDetails() {
     }
 
     return (
-        <section>
-            <h1>{technology.title}</h1>
+        <section className="details">
+            <h2 className="details__title">{technology.title}</h2>
 
-            <p>{technology.description}</p>
+            <p className="details__description">{technology.description}</p>
 
-            <Link to='..'>Назад к технологиям</Link>
+            <div className="details__action">
+                <Link
+                    className="details__back"
+                    to='..'
+                >
+                    Назад к технологиям
+                </Link>
+            </div>
+
         </section>
     );
 }
